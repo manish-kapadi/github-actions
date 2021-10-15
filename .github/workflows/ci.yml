@@ -9,11 +9,9 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-    name: build
+  php-lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: PHP-Lint
-        uses: michaelw90/PHP-Lint@master
-      - run: make
+      - uses: michaelw90/PHP-Lint@master
+
